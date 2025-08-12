@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://planner-p0cw8rgqx-sobreiras-projects.vercel.app'],
+  origin: ['http://localhost:5173', 'https://planner-p0cw8rgqx-sobreiras-projects.vercel.app', 'https://planner-pro-frontend.netlify.app'],
   credentials: true
 }));
 app.use(express.json());

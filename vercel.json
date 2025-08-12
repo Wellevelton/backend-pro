@@ -8,11 +8,17 @@
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/server-complete.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/server-complete.js"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
+  "functions": {
+    "server-complete.js": {
+      "maxDuration": 30
+    }
   }
 }

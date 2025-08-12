@@ -16,6 +16,16 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Endpoint raiz para Vercel
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Planner Pro Backend API',
+    status: 'Online',
+    timestamp: new Date().toISOString(),
+    version: '1.0.0'
+  });
+});
+
 // Middleware de autenticação
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
